@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://eq00s05dsnr8"]
+
+[ext_resource type="PackedScene" uid="uid://bbe1rxesstcri" path="res://models/gltf/trafficlight_A.gltf" id="1_0fcp0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x33tx"]
+height = 5.75684
+radius = 0.265625
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_grmwf"]
+size = Vector3(0.673889, 0.641052, 0.651917)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mdii7"]
+size = Vector3(0.629822, 1.67944, 0.629753)
+
+[node name="Traffic_Light_A" type="StaticBody3D"]
+
+[node name="trafficlight_A2" parent="." instance=ExtResource("1_0fcp0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87842, 0)
+shape = SubResource("CylinderShape3D_x33tx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.727228, 2.79519, 0.0540466)
+shape = SubResource("BoxShape3D_grmwf")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0062561, 4.96033, 0.521458)
+shape = SubResource("BoxShape3D_mdii7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.530243, 4.96033, -0.0318232)
+shape = SubResource("BoxShape3D_mdii7")

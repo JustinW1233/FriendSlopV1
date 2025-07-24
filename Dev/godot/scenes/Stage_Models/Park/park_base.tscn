@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://xn3se6r4p2ht"]
+
+[ext_resource type="PackedScene" uid="uid://bueuwoalelgyj" path="res://models/gltf/park_base.gltf" id="1_ny4gd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5whbw"]
+size = Vector3(16.0181, 0.791016, 16.0209)
+
+[node name="Grass_Base" type="StaticBody3D"]
+
+[node name="park_base2" parent="." instance=ExtResource("1_ny4gd")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00796509, 0.409006, -0.0027771)
+shape = SubResource("BoxShape3D_5whbw")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://sh2dpcxtnjt3"]
+
+[ext_resource type="PackedScene" uid="uid://pdmw5a3eu3g6" path="res://models/gltf/streetlight.gltf" id="1_3gum8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6wx4v"]
+height = 7.2085
+radius = 0.254395
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rr36u"]
+height = 1.61536
+radius = 0.296387
+
+[node name="Street_Light_Modern" type="StaticBody3D"]
+
+[node name="streetlight2" parent="." instance=ExtResource("1_3gum8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.60425, 0)
+shape = SubResource("CylinderShape3D_6wx4v")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.06866, 7.41748, 0)
+shape = SubResource("CylinderShape3D_rr36u")

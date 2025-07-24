@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://tl4e2ve3iuhd"]
+
+[ext_resource type="PackedScene" uid="uid://r3kd8g4wgqna" path="res://models/gltf/park_road_straight.gltf" id="1_uyxl8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v3sqj"]
+size = Vector3(16.0318, 0.819336, 16)
+
+[node name="Park_Road_Straight" type="StaticBody3D"]
+
+[node name="park_road_straight2" parent="." instance=ExtResource("1_uyxl8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00326538, 0.410594, 0.0078125)
+shape = SubResource("BoxShape3D_v3sqj")

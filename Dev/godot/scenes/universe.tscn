@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://j4nhmgyotdxd"]
+[gd_scene load_steps=23 format=3 uid="uid://j4nhmgyotdxd"]
 
 [ext_resource type="PackedScene" uid="uid://bjgyt5ck4cxh0" path="res://scenes/Stage_Models/sidewalk.tscn" id="1_56nod"]
 [ext_resource type="PackedScene" uid="uid://cdbec05st1pxl" path="res://scenes/player.tscn" id="1_h4s8v"]
@@ -9,9 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bmk6vsnuwksi5" path="res://scenes/Stage_Models/Park/park_corner_wall_with_trees.tscn" id="6_jegdv"]
 [ext_resource type="PackedScene" uid="uid://ccx0xklh40g6d" path="res://scenes/Stage_Models/Buildings/building_1.tscn" id="7_56nod"]
 [ext_resource type="PackedScene" uid="uid://dxwnwc6lbqm3l" path="res://scenes/Stage_Models/Park/park_entry_way_decorated.tscn" id="7_fbuf2"]
+[ext_resource type="PackedScene" uid="uid://tl4e2ve3iuhd" path="res://scenes/Stage_Models/Park/park_road_straight.tscn" id="8_3kwp1"]
 [ext_resource type="PackedScene" uid="uid://rpsd7s7e328c" path="res://scenes/Stage_Models/Buildings/building_2.tscn" id="8_yb76g"]
 [ext_resource type="PackedScene" uid="uid://dmsn0s5pgb0sa" path="res://scenes/Stage_Models/Buildings/building_3.tscn" id="9_7viwd"]
+[ext_resource type="PackedScene" uid="uid://dx2otbb7imvpn" path="res://scenes/Stage_Models/Park/park_center.tscn" id="9_tqeu6"]
 [ext_resource type="PackedScene" uid="uid://cjhxr1b045yts" path="res://scenes/Stage_Models/Buildings/building_4.tscn" id="10_7f6e7"]
+[ext_resource type="PackedScene" uid="uid://xn3se6r4p2ht" path="res://scenes/Stage_Models/Park/park_base.tscn" id="10_tqeu6"]
 [ext_resource type="PackedScene" uid="uid://cpfbg3brhu3sy" path="res://scenes/Stage_Models/Buildings/building_5.tscn" id="11_fbuf2"]
 [ext_resource type="PackedScene" uid="uid://bghcitcvjy1oy" path="res://scenes/Stage_Models/Buildings/building_6.tscn" id="12_kk3rw"]
 [ext_resource type="PackedScene" uid="uid://cjwsct1xinj1m" path="res://scenes/Stage_Models/Buildings/building_7.tscn" id="13_3kwp1"]
@@ -35,6 +38,7 @@ sky = SubResource("Sky_qbb8e")
 glow_enabled = true
 
 [node name="universe" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.49699, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.997916, -0.0645324, -2.8208e-09, 0, -4.37114e-08, 1, -0.0645324, 0.997916, 4.36203e-08, -0.000281334, 0.00657749, 7.62939e-06)
@@ -173,19 +177,19 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 128, 0
 transform = Transform3D(-1, 0, -3.92589e-07, 0, 1, 0, 1.50996e-07, 0, -2.6, 16, 0, -17.4306)
 
 [node name="Park_Wall2" parent="Park" instance=ExtResource("3_yftk6")]
-transform = Transform3D(-1, 0, 3.77489e-07, 0, 1, 0, -1.50996e-07, 0, -2.5, 16, 0, 38.0045)
+transform = Transform3D(-1, 0, 3.95609e-07, 0, 1, 0, -1.50996e-07, 0, -2.62, 16, 0, 37.5255)
 
 [node name="Park_EntryWay_Decorated" parent="Park" instance=ExtResource("7_fbuf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.8, -0.054, 10)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.8, -0.054, 9.19581)
 
 [node name="Park_Wall5" parent="Park" instance=ExtResource("3_yftk6")]
 transform = Transform3D(1.94707e-07, 0, -2.6, 0, 1, 0, 1, 0, 5.06239e-07, 44.3114, 0, 66.0144)
 
 [node name="Park_Wall6" parent="Park" instance=ExtResource("3_yftk6")]
-transform = Transform3D(-1.07285e-07, 0, -2.5, 0, 1, 0, 1, 0, -2.6821e-07, 100.286, 0, 66.0187)
+transform = Transform3D(-1.62921e-07, 0, -2.6, 0, 1, 0, 1, 0, -4.23594e-07, 99.5554, 0, 66.0187)
 
 [node name="Park_EntryWay_Decorated3" parent="Park" instance=ExtResource("7_fbuf2")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 71.742, -0.054, 66.2052)
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 70.6048, -0.054, 66.2052)
 
 [node name="Park_Wall7" parent="Park" instance=ExtResource("3_yftk6")]
 transform = Transform3D(-2.8213e-07, 0, 2.6, 0, 1, 0, -1, 0, -7.33538e-07, 100.051, 0, -46.0366)
@@ -200,16 +204,43 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 72.124
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.6, 128, 0, -17.4306)
 
 [node name="Park_Wall4" parent="Park" instance=ExtResource("3_yftk6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.5, 128, 0, 38.0045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.55, 128, 0, 38.004)
 
 [node name="Park_EntryWay_Decorated2" parent="Park" instance=ExtResource("7_fbuf2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 128.177, -0.054, 11.0198)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 128.177, -0.054, 10.7287)
 
 [node name="Park_CornerWall_NoTrees3" parent="Park" instance=ExtResource("5_jegdv")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 16, 0, 66)
 
 [node name="Park_CornerWall_WithTrees" parent="Park" instance=ExtResource("6_jegdv")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 0, -46)
+
+[node name="Park_Road_Straight" parent="Park" instance=ExtResource("8_3kwp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.5, 71.36, 0, -18.054)
+
+[node name="Park_Road_Straight4" parent="Park" instance=ExtResource("8_3kwp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.55, 71.36, 0, 37.8419)
+
+[node name="Park_Road_Straight2" parent="Park" instance=ExtResource("8_3kwp1")]
+transform = Transform3D(-4.37114e-08, 0, 2.6, 0, 1, 0, -1, 0, -1.1365e-07, 99.2016, 0, 9.94644)
+
+[node name="Park_Road_Straight3" parent="Park" instance=ExtResource("8_3kwp1")]
+transform = Transform3D(-4.37114e-08, 0, 2.6, 0, 1, 0, -1, 0, -1.1365e-07, 42.6576, 0, 9.94644)
+
+[node name="Park_Center" parent="Park" instance=ExtResource("9_tqeu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.352, 0, 9.93669)
+
+[node name="Grass_Base" parent="Park" instance=ExtResource("10_tqeu6")]
+transform = Transform3D(2.525, 0, 0, 0, 1, 0, 0, 0, 2.76, 43.6804, 0, -18.8884)
+
+[node name="Grass_Base2" parent="Park" instance=ExtResource("10_tqeu6")]
+transform = Transform3D(2.645, 0, 0, 0, 1, 0, 0, 0, 2.67, 99.6828, 0, -18.8884)
+
+[node name="Grass_Base3" parent="Park" instance=ExtResource("10_tqeu6")]
+transform = Transform3D(2.605, 0, 0, 0, 1, 0, 0, 0, 2.59, 99.6828, 0, 38.1082)
+
+[node name="Grass_Base4" parent="Park" instance=ExtResource("10_tqeu6")]
+transform = Transform3D(2.605, 0, 0, 0, 1, 0, 0, 0, 2.59, 43.0176, 0, 38.1082)
 
 [node name="Buildings" type="CSGCombiner3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 0, 0)

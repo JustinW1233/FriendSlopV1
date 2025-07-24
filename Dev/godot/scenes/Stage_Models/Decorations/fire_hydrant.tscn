@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://566w1ngsfam0"]
+
+[ext_resource type="PackedScene" uid="uid://sxehqlc1y4gq" path="res://models/gltf/firehydrant.gltf" id="1_vri5e"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rjo0s"]
+height = 1.7403
+radius = 0.60498
+
+[node name="Fire_Hydrant" type="StaticBody3D"]
+
+[node name="firehydrant2" parent="." instance=ExtResource("1_vri5e")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.879791, 0)
+shape = SubResource("CylinderShape3D_rjo0s")
