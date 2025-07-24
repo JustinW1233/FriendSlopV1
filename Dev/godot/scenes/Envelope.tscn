@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3qum5oujme5y"]
+[gd_scene load_steps=5 format=3 uid="uid://c3qum5oujme5y"]
 
 [ext_resource type="Script" uid="uid://jk6ohig4774b" path="res://scripts/envelope.gd" id="1_5y12r"]
+[ext_resource type="Script" uid="uid://cc7kqeok0olt8" path="res://scripts/interaction_controller.gd" id="2_bmft5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_58qmj"]
 size = Vector3(0.1, 0.5, 0.8)
@@ -17,3 +18,6 @@ mesh = SubResource("BoxMesh_58qmj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00617981, 0.00283813, -0.000457764)
 shape = SubResource("BoxShape3D_5y12r")
+
+[node name="InteractionController" type="Node" parent="."]
+script = ExtResource("2_bmft5")

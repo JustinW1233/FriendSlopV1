@@ -2,7 +2,7 @@ extends Node3D
 
 var using_mouse : bool = true
 var mouse_sensitivity : float = 0.003
-@onready var camera_3d: Camera3D = %Camera3D
+@onready var neck: Node3D = %Neck
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	_mouse_motion(event)
-	_mouse_capture_and_release(event)
+	_mouse_capture_and_release(event) # allow using ui_cancel button to move mouse outside of game window and clicking back into game to return focus
 
 func _mouse_motion(event):
 	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
@@ -23,8 +23,8 @@ func _mouse_motion(event):
 	
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		rotate_x(event.relative.y * -mouse_sensitivity)
-		rotation.x = clampf(rotation.x, -deg_to_rad(75), deg_to_rad(90))
+		neck.rotate_x(-event.relative.y * mouse_sensitivity)
+		neck.rotation.x = clampf(neck.rotation.x, -deg_to_rad(75), deg_to_rad(90))
 
 func _mouse_capture_and_release(event):
 	if event.is_action_pressed("ui_cancel"):
