@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
-@onready var third_person_camera_3d: Node3D = %ThirdPersonCamera3d
+@onready var head: Node3D = %Head
 @onready var mesh_instance_3d: MeshInstance3D = %MeshInstance3D
 
 func _physics_process(delta: float) -> void:
@@ -17,9 +17,9 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("game_left", "game_right", "game_up", "game_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized().rotated(Vector3.UP, third_person_camera_3d.rotation.y)
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized().rotated(Vector3.UP, head.rotation.y)
 	if direction:
-		mesh_instance_3d.rotation.y = third_person_camera_3d.rotation.y
+		mesh_instance_3d.rotation.y = head.rotation.y
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
