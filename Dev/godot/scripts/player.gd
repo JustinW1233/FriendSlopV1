@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
 @onready var third_person_camera_3d: Node3D = %ThirdPersonCamera3d
 @onready var mesh_instance_3d: MeshInstance3D = %MeshInstance3D

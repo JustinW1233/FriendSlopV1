@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjgyt5ck4cxh0"]
+
+[ext_resource type="PackedScene" uid="uid://cfdb82qc1m80y" path="res://models/gltf/base.gltf" id="1_bv1oo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bv1oo"]
+size = Vector3(15.9689, 0.763298, 15.999)
+
+[node name="Sidewalk" type="StaticBody3D"]
+
+[node name="base2" parent="." instance=ExtResource("1_bv1oo")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00543213, 0.383091, 0.00634766)
+shape = SubResource("BoxShape3D_bv1oo")
