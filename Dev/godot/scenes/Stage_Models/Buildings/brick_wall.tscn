@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfb4nibcho5se"]
+
+[ext_resource type="PackedScene" uid="uid://cumgqe4ctkaal" path="res://models/gltf/brick-wall_colormap.glb" id="1_86gpm"]
+[ext_resource type="Texture2D" uid="uid://dkbfyjs5gklay" path="res://models/gltf/colormap.png" id="2_e14kc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya5nr"]
+albedo_texture = ExtResource("2_e14kc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e14kc"]
+size = Vector3(7.95361, 5.59222, 1.37927)
+
+[node name="Brick_Wall" type="StaticBody3D"]
+
+[node name="brick-wall2" parent="." instance=ExtResource("1_86gpm")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+
+[node name="brick-wall" parent="brick-wall2" index="0"]
+material_override = SubResource("StandardMaterial3D_ya5nr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00219727, 2.79898, -3.27203)
+shape = SubResource("BoxShape3D_e14kc")
+
+[editable path="brick-wall2"]

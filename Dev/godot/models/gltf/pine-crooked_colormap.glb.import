@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b48mtt81l0g5"
-path="res://.godot/imported/bench.gltf-132cb96eb9d96953b838e8c51fc8b427.scn"
+uid="uid://dfldutbfx3hqp"
+path="res://.godot/imported/pine-crooked_colormap.glb-0c54866490b728d6a3ac6112872490a5.scn"
 
 [deps]
 
-source_file="res://models/gltf/bench.gltf"
-dest_files=["res://.godot/imported/bench.gltf-132cb96eb9d96953b838e8c51fc8b427.scn"]
+source_file="res://models/gltf/pine-crooked_colormap.glb"
+dest_files=["res://.godot/imported/pine-crooked_colormap.glb-0c54866490b728d6a3ac6112872490a5.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=4.0
+nodes/root_scale=8.0
 nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
